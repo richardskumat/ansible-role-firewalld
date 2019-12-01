@@ -1,0 +1,6 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  roles:
+    - role: richardskumat.ansible_role_firewalld

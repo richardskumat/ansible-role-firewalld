@@ -1,0 +1,8 @@
+---
+
+- name: Install Firewalld for Debian 10
+  apt:
+   name: firewalld
+   state: present
+   update_cache: yes
+  notify: "enable firewalld"

@@ -1,0 +1,23 @@
+---
+
+# see https://docs.ansible.com/ansible/latest/modules/firewalld_module.html?highlight=firewalld#examples
+
+# https://docs.ansible.com/ansible/latest/modules/firewalld_module.html?highlight=firewalld#parameters
+
+- name: Configuring firewalld rules
+  firewalld:
+    icmp_block: "{{ item.icmp_block | default(omit) }}"
+    icmp_block_inversion: "{{ item.icmp_block_inversion | default(omit) }}"
+    immediate: "{{ item.immediate | default(omit) }}"
+    interface: "{{ item.interface | default(omit) }}"
+    masquerade: "{{ item.masquerade | default(omit) }}"
+    offline: "{{ item.offline | default(omit) }}"
+    permanent: "{{ item.permanent | default(item) }}"
+    port: "{{ item.port | default(omit) }}"
+    rich_rule: "{{ item.rich_rule | default(omit) }}"
+    service: "{{ item.service | default(omit) }}"
+    source: "{{ item.source | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
+    timeout: "{{ item.timeout | default(omit) }}"
+    zone: "{{ item.zone | default(omit) }}"
+  with_items: "{{ firewalld_rules }}"

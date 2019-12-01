@@ -1,0 +1,6 @@
+---
+- name: Install Firewalld for CentOS 7
+  yum:
+   name: firewalld
+   state: present
+  notify: "enable firewalld"

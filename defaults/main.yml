@@ -1,0 +1,23 @@
+---
+# defaults file for richardskumat.ansible_role_firewalld
+#firewalld_rules:
+  # enable https
+#  - permanent: yes
+#    service: https
+#    state: enabled
+  # enable http
+#  - permanent: yes
+#    service: http
+#    state: enabled
+  # enable ssh
+#  - permanent: yes
+#    service: ssh
+#    state: enabled
+  # enable ftp
+#  - permanent: yes
+#    service: ftp
+#    state: enabled
+
+firewalld_rules: []
+firewalld_service_state: started
+firewalld_service_enabled: 'yes'

@@ -1,0 +1,37 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+  provider:
+    name: libvirt
+lint:
+  name: yamllint
+platforms:
+  - name: instance
+    box: "${MOLECULE_DISTRO:-generic/debian10}"
+    groups:
+      - firewalld
+provisioner:
+  name: ansible
+  log: true
+  inventory:
+    group_vars:
+      firewalld:
+        firewalld_rules:
+          # enable https
+          - permanent: yes
+            service: ssh
+            state: enabled
+          # enable http
+          - permanent: yes
+            service: http
+            state: enabled
+  lint:
+    name: ansible-lint
+scenario:
+  name: vagrant_libvirt
+verifier:
+  name: testinfra
+  lint:
+    name: flake8

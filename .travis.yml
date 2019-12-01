@@ -5,7 +5,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: ansible-role-docker
+    - ROLE_NAME: ansible-role-firewalld
     - GALAXY_USERNAME: richardskumat
     - GALAXY_ROLENAME: ansible_role_firewalld
   matrix:

@@ -6,7 +6,7 @@ image: qwe1/dind-ansible-molecule:latest
 variables:
   DOCKER_DRIVER: overlay2
   DOCKER_TLS_CERTDIR: "/certs"
-  ROLE_NAME: ansible-role-docker
+  ROLE_NAME: ansible-role-firewalld
   GALAXY_USERNAME: richardskumat
   GALAXY_ROLENAME: ansible_role_firewalld
 

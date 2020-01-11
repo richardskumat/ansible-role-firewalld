@@ -1,6 +1,8 @@
 Firewalld
 =========
 
+This role doesn't work, don't use it.
+
 This role started out as an experiment to get Firewalld running
 on Debian 10, but it turned out to be a failure.
 

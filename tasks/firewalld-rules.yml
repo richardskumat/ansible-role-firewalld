@@ -1,8 +1,8 @@
 ---
 
-# see https://docs.ansible.com/ansible/latest/modules/firewalld_module.html?highlight=firewalld#examples
+# see https://docs.ansible.com/ansible/latest/modules/firewalld_module.html#examples
 
-# https://docs.ansible.com/ansible/latest/modules/firewalld_module.html?highlight=firewalld#parameters
+# https://docs.ansible.com/ansible/latest/modules/firewalld_module.html#parameters
 
 - name: Configuring firewalld rules
   firewalld:

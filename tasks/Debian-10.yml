@@ -2,7 +2,10 @@
 
 - name: Install Firewalld for Debian 10
   apt:
-   name: firewalld
+   name:
+    - firewalld
+    - python3-firewall
    state: present
+   default_release: buster-backports
    update_cache: yes
   notify: "enable firewalld"

@@ -5,6 +5,8 @@ services: docker
 
 env:
   global:
+    # https://docs.docker.com/engine/api/
+    - DOCKER_API_VERSION: 1.38
     - ROLE_NAME: ansible-role-firewalld
     - GALAXY_USERNAME: richardskumat
     - GALAXY_ROLENAME: ansible_role_firewalld

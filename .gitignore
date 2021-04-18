@@ -1,0 +1,4 @@
+*.pyc
+# molecule making these symlinks folders?
+.cache
+

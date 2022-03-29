@@ -25,9 +25,7 @@ before_script:
   - cp -aR $ROLE_NAME $GALAXY_USERNAME.$GALAXY_ROLENAME
   - cd $GALAXY_USERNAME.$GALAXY_ROLENAME
 
-test_d9:
+test_d11:
   stage: test
-  variables:
-    MOLECULE_DISTRO: "centos:7"
   script:
     - molecule test

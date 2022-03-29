@@ -6,6 +6,5 @@
     - firewalld
     - python3-firewall
    state: present
-   default_release: buster-backports
    update_cache: yes
   notify: "enable firewalld"

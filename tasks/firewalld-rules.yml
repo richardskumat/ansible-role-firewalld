@@ -5,7 +5,7 @@
 # https://docs.ansible.com/ansible/latest/modules/firewalld_module.html#parameters
 
 - name: Configuring firewalld rules
-  firewalld:
+  ansible.posix.firewalld:
     icmp_block: "{{ item.icmp_block | default(omit) }}"
     icmp_block_inversion: "{{ item.icmp_block_inversion | default(omit) }}"
     immediate: "{{ item.immediate | default(omit) }}"

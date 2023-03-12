@@ -1,10 +1,10 @@
 ---
 
-- name: Install Firewalld for Debian 10
-  apt:
+- name: Install Firewalld for Debian 11
+  ansible.builtin.apt:
    name:
     - firewalld
     - python3-firewall
    state: present
    update_cache: yes
-  notify: "enable firewalld"
+  notify: "Enable firewalld"
